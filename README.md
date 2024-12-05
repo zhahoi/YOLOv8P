@@ -61,7 +61,7 @@ YOLOP = [
 ]
 ```
 
-在YOLOP的基础上替换了YOLOv8使用的`C2f` 和 `SPPF`模块，而`Adapt_concat`参考自**[YOLOv8-multi-task](https://github.com/JiayuanWang-JW/YOLOv8-multi-task)**，没有详细考究该模块是否有用，但是既然发了论文应该有一定效果。此外，原始的YOLOP中对于车道线检测和可行驶区域分支网络的设计，我觉得过于草率了，因为对于分割网络，融合上下文信息非常重要（如Unet)，我自己训练原始YOLOP网络时（部分数据和较少的epoch数），发现可行使区域和车道线检测预测的结果并不好。而**[YOLOv8-multi-task](https://github.com/JiayuanWang-JW/YOLOv8-multi-task)**融合了backbone的特征层，对于预测可行使区域和车道线检测有很大的帮助。
+在YOLOP的基础上替换了YOLOv8使用的`C2f` 和 `SPPF`模块，而`Adapt_concat`参考自[YOLOv8-multi-task](https://github.com/JiayuanWang-JW/YOLOv8-multi-task)，没有详细考究该模块是否有用，但是既然发了论文应该有一定效果。此外，原始的YOLOP中对于车道线检测和可行驶区域分支网络的设计，我觉得过于草率了，因为对于分割网络，融合上下文信息非常重要（如Unet)，我自己训练原始YOLOP网络时（部分数据和较少的epoch数），发现可行使区域和车道线检测预测的结果并不好。而[YOLOv8-multi-task](https://github.com/JiayuanWang-JW/YOLOv8-multi-task)融合了backbone的特征层，对于预测可行使区域和车道线检测有很大的帮助。
 
 本仓库设计的YOLOv8P的网路结构设计，参考了二者的结构，融合成了最后的网络。为了减少计算量，尽量减少了通道数和模块的重复次数。
 
