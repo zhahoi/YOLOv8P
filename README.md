@@ -7,7 +7,7 @@
 
 YOLOP是基于YOLOv5的模块构架的，想着如果使用yolov8的模块对其进行替换，可能会提升检测结果。在
 
-Github上搜索一番之后，发现有一个仓库为**[YOLOv8-multi-task](https://github.com/JiayuanWang-JW/YOLOv8-multi-task)**，该仓库在YOLOv8基础之上将其修改成多任务的模型，其原理上和YOLOP一致，但是有了些许创新。本仓库设计的主干结构参考了该仓库创新结构设计。
+Github上搜索一番之后，发现有一个仓库为[YOLOv8-multi-task](https://github.com/JiayuanWang-JW/YOLOv8-multi-task)，该仓库在YOLOv8基础之上将其修改成多任务的模型，其原理上和YOLOP一致，但是有了些许创新。本仓库设计的主干结构参考了该仓库创新结构设计。
 
 本仓库设计的YOLOv8P网络结构如下：
 
